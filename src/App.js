@@ -3,12 +3,15 @@ import "./App.css";
 import { useEffect, useState } from "react";
 
 function App() {
+    console.log("env", process.env.REACT_APP_PROD_API_BASE_URL);
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_BASE_URL}/blog`).then((res) => {
-            setBlogs(res.data);
-        });
+        axios
+            .get(`${process.env.REACT_APP_PROD_API_BASE_URL}/blog`)
+            .then((res) => {
+                setBlogs(res.data);
+            });
     }, []);
     return (
         <div className="App">
