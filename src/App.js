@@ -7,13 +7,12 @@ function App() {
     const [blogs, setBlogs] = useState("");
 
     useEffect(() => {
-        console.log("fetching");
-        fetch(`${process.env.REACT_APP_PROD_API_BASE_URL}/api/blog`)
-            .then((response) => console.log("response", response))
-            .then(
-                (data) => console.log(data)
-                // setBlogs(res.data)
-            );
+        axios
+            .get(`${process.env.REACT_APP_PROD_API_BASE_URL}/api/blog`)
+            .then((res) => {
+                console.log(res.data);
+                setBlogs(res.data);
+            });
     }, []);
 
     return (
