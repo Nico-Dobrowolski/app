@@ -24,7 +24,7 @@ function App() {
         <div className="App">
             <h4>Article de blog</h4>
             <dl>
-                {Array.isArray(blog) === true &&
+                {blogs &&
                     blogs.map((blog) => {
                         return (
                             <>
