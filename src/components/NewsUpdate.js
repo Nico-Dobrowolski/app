@@ -27,7 +27,7 @@ export default function NewsUpdate() {
             })
             .then((res) => {
                 console.log(
-                    `The data are from api url : ${process.env.REACT_APP_API_BASE_URL}/api/blogs `,
+                    `The data are from api url : ${process.env.REACT_APP_PROD_API_BASE_URL}/api/blogs `,
                     res.data
                 );
                 setBlogs(res.data);

@@ -78,7 +78,7 @@ export default function AppTasks() {
             })
             .then((res) => {
                 console.log(
-                    `The data are from api url : ${process.env.REACT_APP_API_BASE_URL}api/tasks `,
+                    `The data are from api url : ${process.env.REACT_APP_PROD_API_BASE_URL}api/tasks `,
                     res.data
                 );
                 setTasks(res.data);
