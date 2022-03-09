@@ -14,7 +14,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function NewsUpdate() {
-    axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
+    axios.defaults.baseURL = process.env.REACT_APP_PROD_API_BASE_URL;
 
     const [blogs, setBlogs] = useState([]);
 

@@ -56,6 +56,7 @@ function TaskItem({ task, checked, formik, ...other }) {
 }
 
 export default function AppTasks() {
+    axios.defaults.baseURL = process.env.REACT_APP_PROD_API_BASE_URL;
     const [tasks, setTasks] = useState([]);
 
     const formik = useFormik({
